@@ -1,15 +1,49 @@
-/* Header */
-.header {
-  background-color: rgb(0, 0, 0);
-  background-image: radial-gradient(circle at center , #000 25%, #494949, #fff);
-  color: #ffffff;
-  padding: 205px;
-  text-align: center;
+/* Header 
+.header-bg {
+  background-image: url(../OGAH\ GESER!!!.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 215px;
 }
 
-  .header h1 {
-    font-size: 40px;
+  .header-text {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    filter: none;
   }
+*/
+
+.header-bg {
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  padding: 215px;
+}
+
+.header-bg::before {
+  width: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../OGAH\ GESER!!!.jpg);
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  filter: blur(7px); /* Adjust the blur as needed */
+  z-index: 1; /* Place it behind the text */
+}
+
+.header-text {
+  position: relative; /* Make sure the text is above the blurred background */
+  z-index: 2; /* Higher than the blurred background */
+  color: white; /* Change text color as needed for contrast */
+  text-align: center; /* Center the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+  
 
 /* Navbar */
 .navbar {
@@ -25,10 +59,16 @@
     transition: all 0.5 ease;
     color: #fff;
     font-size: 24px;
+    text-decoration: none;
   }
 
   .navbar a.active {
     background-color: #000000;
+    text-decoration: none;
+  }
+
+  .navbar span {
+    padding: 10px;
   }
 
   .navbar a:hover {
