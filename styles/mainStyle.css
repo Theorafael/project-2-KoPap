@@ -15,6 +15,11 @@
   }
 */
 
+/* Body */
+body {
+ font-family: Arial, Helvetica, sans-serif; 
+}
+
 .header-bg {
   position: relative;
   overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
@@ -29,7 +34,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../OGAH\ GESER!!!.jpg);
+  background-image: url(../assets/images/OGAH\ GESER!!!.jpg);
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   filter: blur(7px); /* Adjust the blur as needed */
@@ -87,16 +92,28 @@
   }
 
     .side {
+      -ms-flex: 30%;
       flex: 30%;
       background-color: #ddd;
       padding: 20px;
+      transition: left 0.5s;
     }
 
+      .side h1 {
+        border-bottom: 2px solid black;
+        margin-bottom: 7px;
+      }
+
     .main {
+      -ms-flex: 70%;
       flex: 70%;
       background-color: #fff;
       padding: 20px;
     }
+
+      .main .imageStyle {
+        width: 100%;
+      }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
