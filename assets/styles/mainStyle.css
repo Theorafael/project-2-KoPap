@@ -34,7 +34,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../assets/images/OGAH\ GESER!!!.jpg);
+  background-image: url(/images/OGAH\ GESER!!!.jpg);
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   filter: blur(7px); /* Adjust the blur as needed */

@@ -43,3 +43,10 @@
         <h3>News</h3>
         <p>We'll let you know what we're up to.</p>
       </div>
+
+      .side {
+      flex: 30%;
+      background-color: #ddd;
+      padding: 20px;
+      transition: left 0.5s;
+    }
