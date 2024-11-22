@@ -4,19 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="../styles/mainStyle.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/aboutStyle.css">
 </head>
 <body>
-    
-    <!-- Top Navigation -->
-    <div class="topnav" id="myTopnav">
-        <a href="../index.html">Home</a>
-        <a href="../contents/about.html" class="active">About</a>
-        <a href="../contents/members.html">Members</a>
-        <a href="../contents/news.html">News</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+
+  <!-- Side Navbar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="about.html"><i class="fa fa-circle-info"></i> About</a>
+    <a href="members.html"><i class="fa fa-users"></i> Members</a>
+    <a href="news.html"><i class="fa fa-bullhorn"></i> News</a>
+  </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <!-- Main Content -->
+     <div class="main" id="main">
+      <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+          <div class="responsive-container-block leftSide">
+            <p class="text-blk heading">
+              About Us
+            </p>
+            <p class="text-blk subHeading">
+              PapTim is a group that was formed based on our rebellious attitude as high school students in the 2023 academic year (our 12th grade, our final year in high school). 
+              It all started when one of us decided to skip class, followed by several others who were already bored with the lessons at that time. 
+              Initially, we were caught by teachers several times, and even 4 of our members received warning letters (SP) during our school days. 
+              Our hard work in skipping classes paid off, we could freely skip classes whenever and wherever we wanted to escape because we had already memorized all the possible routes to take.
+            </p>
+          </div>
+
+          <div class="responsive-container-block rightSide">
+            <img class="number1img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET32.jpg">
+            <img class="number2img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d14.png">
+            <img class="number3img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b245.png">
+            <img class="number5img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Customer supports.png">
+            <iframe allowfullscreen="allowfullscreen" class="number4vid" poster="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b242.png" src="https://www.youtube.com/embed/svg%3E?">
+            </iframe>
+            <img class="number7img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d51.png">
+            <img class="number6img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d12.png">
+          </div>
+        </div>
       </div>
+     </div>
+  </div>
+
+  <script src="assets/scripts/aboutScript.js"></script>
 </body>
 </html>
