@@ -50,3 +50,51 @@
       padding: 20px;
       transition: left 0.5s;
     }
+
+
+members.html
+<!-- Members -->
+     <div id="main">
+       <div class="card-container">
+         <div class="card">
+           <img src="" alt="">
+           <h1>Guntur Akasah</h1>
+           <h5 class="alias">(Pace Guntur Kongge)</h5>
+           <p>Papua University</p>
+           <div style="margin: 24px 0;">
+             <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="" alt="">
+            <h1>Alfi Syahri Ramadhan</h1>
+            <h5 class="alias">(Peno Galon)</h5>
+            <p>Papua University</p>
+            <div style="margin: 24px 0;">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+/* Content */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
