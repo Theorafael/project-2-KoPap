@@ -1,5 +1,4 @@
-
-// Navbar
+// Navbar off-canvas with Opacity
 function openNav() {
     document.getElementById("myTopnav").style.width = "250px";
     document.getElementById("newsMain").style.marginLeft = "250px";
@@ -9,6 +8,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("myTopnav").style.width = "0";
     document.getElementById("newsMain").style.width = "0";
+    document.getElementsByClassName("bgimg").style.position = "relative";
     document.body.style.backgroundColor = "white";
 }
 
@@ -21,6 +21,7 @@ function myFunction() {
     }
 }
 
+// Countdown date @ <div id="myCountdown"></div>
 let countDownDate = new Date("Jan 5, 2025 00:00:00").getTime();
 
 let x = setInterval(() => {

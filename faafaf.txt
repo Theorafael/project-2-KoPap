@@ -98,3 +98,65 @@ members.html
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+<div class="card">
+          <img src="images/pp1.jpg" alt="Theo" style="width:100%">
+          <h1>Theodore Rafael Titahena</h1>
+          <h5>(Pace Tita Remigius)</h5>
+          <p class="title">Vice President, PapTim Group</p>
+          <p>Ambong University</p>
+          <div style="margin: 24px 0;">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>  
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>  
+            <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+          </div>
+          <p><button>Contact</button></p>
+        </div>
+
+
+        .card {
+    width: 48%;
+    max-width: 48%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+    }
+
+    button:hover, a:hover {
+        opacity: 0.7;
+    }
+  
+/* Media query untuk layar lebih kecil */
+@media screen and (max-width: 650px) {
+    .main {
+      width: 100%; /* Pada layar kecil, setiap item akan mengisi seluruh lebar */
+      display: block;
+    }
+}

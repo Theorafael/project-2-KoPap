@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(51, 51, 51);
+}
 /* Sidenav */
 .sidenav {
     height: 100%;
@@ -129,7 +132,7 @@
     font-size: 40px;
     line-height: 64px;
     font-weight: 900;
-    color: #00B2EB;
+    color: #009708;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 40px;
