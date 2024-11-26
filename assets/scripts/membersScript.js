@@ -31,7 +31,7 @@ function closeNav() {
   document.getElementById("membersMain").style.marginLeft= "0";
   let allCards = document.querySelectorAll(".card");
   allCards.forEach(card => {
-    card.style.backgroundColor = card.dataset.originalColor;
+    card.style.backgroundColor = "#f0f0f0";
   });
   let allImg = document.querySelectorAll("img");
   allImg.forEach(img => {
