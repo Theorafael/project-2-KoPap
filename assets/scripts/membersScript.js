@@ -12,6 +12,10 @@ function openNav() {
     card.style.backgroundColor = "rgba(0,0,0,0.7)";
   });
   document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+  let allTitles = document.querySelectorAll(".title");
+  allTitles.forEach(title => {
+    title.style.opacity = "0";
+  })
 }
 
 function closeNav() {
@@ -21,5 +25,9 @@ function closeNav() {
   allCards.forEach(card => {
     card.style.backgroundColor = card.dataset.originalColor;
   });
+  let allTitles = document.querySelectorAll(".title");
+  allTitles.forEach(title => {
+    title.style.opacity = "1";
+  })
   document.body.style.backgroundColor = "white";
 }

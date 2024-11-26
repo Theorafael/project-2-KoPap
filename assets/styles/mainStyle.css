@@ -18,7 +18,7 @@
 /* Body */
 body {
  font-family: Arial, Helvetica, sans-serif; 
- background-color: #000;
+ background-color: #fff;
 }
 
 .header-bg {
@@ -168,59 +168,90 @@ body {
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #555;
+  background-color: #555; /* Dark background */
+  color: white; /* White text */
+  padding: 20px; /* Padding around the content */
+  text-align: left; /* Align text to the left */
 }
 
-  .footer a {
-    color: #fff;
-    font-size: 24px;
-  }
-
-/* members.html */
-/* Side Navbar */
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
+/* Footer Content Container */
+.footer-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out columns */
+  align-items: flex-start; /* Align items at the start */
 }
 
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+/* Company Logo Column */
+.group-logo {
+  flex: 1; /* Allow the logo to take up equal space */
+  text-align: center; /* Center the logo */
+  margin-right: 20px; /* Space between columns */
 }
 
-@media screen and (max-heigth: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.group-logo {
+  width: 100%; /* Adjust width as needed for the logo */
+  height: auto; /* Maintain aspect ratio */
 }
 
+/* Company Info Column */
+.footer-group-info {
+  flex: 1; /* Allow the company info to take up equal space */
+  margin-right: 20px; /* Space between columns */
+}
+
+/* Get in Touch Column */
+.footer-contact {
+  flex: 1; /* Allow the contact section to take up equal space */
+  margin-right: 20px; /* Space between columns */
+}
+
+.footer-contact h2,
+.footer-group-info h2,
+.footer-social-media h2 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-contact input,
+.footer-contact textarea {
+  width: 100%; /* Full width for inputs and textarea */
+  padding: 10px; /* Padding inside the inputs */
+  margin-top: 5px; /* Space above inputs */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.footer-contact button[type="submit"] {
+  background-color: #04aa6d; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the button text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Space above button */
+}
+
+.footer-contact button[type="submit"]:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+/* Social Media Column */
+.footer-social-media {
+  flex: 1; /* Allow the social media section to take up equal space */
+}
+
+.footer-social-media a {
+  color: white; /* Icon color */
+  font-size: 18px; /* Icon size */
+  margin-right: 15px; /* Space between icons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-social-media a:hover {
+  color: #04aa6d; /* Change color on hover */
+}
+
+/* Copyright Text */
+.footer p {
+  margin-top: 20px; /* Space above the copyright text */
+  text-align: center; /* Center the copyright text */
+}

@@ -8,7 +8,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("myTopnav").style.width = "0";
     document.getElementById("newsMain").style.width = "0";
-    document.getElementsByClassName("bgimg").style.position = "relative";
     document.body.style.backgroundColor = "white";
 }
 
@@ -21,22 +20,25 @@ function myFunction() {
     }
 }
 
-// Countdown date @ <div id="myCountdown"></div>
-let countDownDate = new Date("Jan 5, 2025 00:00:00").getTime();
+// Countdown date
+let countDownDate = new Date("Jan 5, 2025 00:00:00").getTime(); // Target date
 
 let x = setInterval(() => {
-    let now = new Date().getTime();
+    let now = new Date().getTime(); // Get current time
     let distance = countDownDate - now;
 
+    // Time calculations days, hours, minutes, seconds
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    // Countdown
     document.getElementById("myCountdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
+    // If the Countdown is over, show message
     if(distance < 0) {
         clearInterval(x);
-        document.getElementById("myCountdown").innerHTML = "EXECUTION";
+        document.getElementById("myCountdown").innerHTML = "D-DAY";
     }
 }, 1000);
