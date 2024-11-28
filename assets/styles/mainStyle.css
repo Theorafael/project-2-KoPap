@@ -237,14 +237,15 @@ body {
 
       /* Footer image/logo */
       .footer-content .footer-left img {
-        width: 30%;
+        width: 50%;
       }
 
       .footer-content h3 span {
-        background: linear-gradient(180deg, black, rgba(255, 255, 255, 0.712));
+        background: linear-gradient(180deg, black, white);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
       /* Footer Links */
