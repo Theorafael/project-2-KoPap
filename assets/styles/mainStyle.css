@@ -40,14 +40,26 @@ body {
     z-index: 1; /* Place it behind the text */
   }
   
-  .header-text {
+  .header-text h1,
+  .header-text h2{
     position: relative; /* Make sure the text is above the blurred background */
     z-index: 2; /* Higher than the blurred background */
-    color: white; /* Change text color as needed for contrast */
+    color: transparent; /* Change text color as needed for contrast */
+    background: linear-gradient(45deg, black, white);
+    -webkit-background-clip: text;
+    background-clip: text;
     text-align: center; /* Center the text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
   }
 
+  .header-text p {
+    color: white; /* Set the text color for the p tag */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+    margin-top: 10px; /* Add some spacing if needed */
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
   /* Navbar below header */
   .navbar {
     background-color: #555;
@@ -103,6 +115,7 @@ body {
       border-radius: 8px; /* Rounded corners */
       padding: 20px; /* Padding around the content */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      margin: 20px auto;
     }
 
     /* Chat Messages Styles */
@@ -120,6 +133,7 @@ body {
       width: 100%; /* Full width for inputs */
       padding: 10px; /* Padding for inputs */
       margin-top: 10px; /* Space above inputs */
+      margin-bottom: 10px;
       border: 1px solid #ccc; /* Light border */
       border-radius: 5px; /* Rounded corners */
     }
@@ -227,7 +241,10 @@ body {
       }
 
       .footer-content h3 span {
-        color: #e0ac1c;
+        background: linear-gradient(180deg, black, rgba(255, 255, 255, 0.712));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
 
       /* Footer Links */
@@ -281,7 +298,8 @@ body {
         }
 
         .footer-content .footer-center p a {
-          color: #e0ac1c;
+          color: #ffffff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
           text-decoration: none;
         }
 
@@ -330,7 +348,7 @@ body {
       margin: 0;
     }
 
-    
+
 
 /* Responsive Area */
 @media screen and (max-width: 700px) {
