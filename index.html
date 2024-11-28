@@ -28,11 +28,18 @@
 
     <!-- Content -->
     <div class="row">
-        <!-- Side Content -->
+        <!-- Chat Content on the Left -->
         <div class="side" id="mySide">
-            <h1>Comments</h1>
+            <h1>Chat</h1>
+            <div class="chat-container">
+                <input type="text" id="usernameInput" placeholder="Enter your name" required />
+                <div id="chatMessages" class="chat-messages"></div>
+                <textarea id="chatInput" placeholder="Type your message..." required></textarea>
+                <button class="btn" onclick="sendMessage()">Send</button>
+            </div>
         </div>
-        <!-- Main Content -->
+        
+        <!-- Main Content on the Right -->
         <div class="main" id="myMain">
             <h1>PaTim</h1>
             <h2>Papua Timor</h2>
@@ -40,6 +47,7 @@
             <img src="images/OGAH GESER!!!.jpg" alt="" class="imageStyle">
         </div>
     </div>
+    <!-- End of Content -->
 
     <!-- Footer -->
      <footer class="footer-content">

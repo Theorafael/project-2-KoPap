@@ -9,161 +9,189 @@ html {
   background-color: #eaf0f2;
 }
 
-/* Body */
 body {
- font: 16px/1.6 Arial, Helvetica, sans-serif; 
- background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.header-bg {
-  position: relative;
-  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
-  padding: 215px;
+
+
+  /* Header */
+  .header-bg {
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    padding: 215px;
+  }
+  
+  .header-bg::before {
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/PapTim\ Logo.png);
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    filter: blur(7px); /* Adjust the blur as needed */
+    z-index: 1; /* Place it behind the text */
+  }
+  
+  .header-text {
+    position: relative; /* Make sure the text is above the blurred background */
+    z-index: 2; /* Higher than the blurred background */
+    color: white; /* Change text color as needed for contrast */
+    text-align: center; /* Center the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  /* Navbar below header */
+  .navbar {
+    background-color: #555;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+  }
+  
+    .navbar a {
+      float: left;
+      width: 25%;
+      text-align: center;
+      padding: 10px 0;
+      transition: all 0.5 ease;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  
+    .navbar a.active {
+      background-color: #000000;
+      text-decoration: none;
+    }
+  
+    .navbar span {
+      padding: 10px;
+    }
+  
+    .navbar a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+
+
+/* Row Styles */
+.row {
+  display: flex;
+  flex: 1;
 }
 
-.header-bg::before {
-  width: 100%;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(/images/PapTim\ Logo.png);
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  filter: blur(7px); /* Adjust the blur as needed */
-  z-index: 1; /* Place it behind the text */
-}
+  /* Side Chat Styles */
+  .side {
+    width: 30%; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for chat */
+    border-right: 1px solid #ccc; /* Optional border */
+  }
 
-.header-text {
-  position: relative; /* Make sure the text is above the blurred background */
-  z-index: 2; /* Higher than the blurred background */
-  color: white; /* Change text color as needed for contrast */
-  text-align: center; /* Center the text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-}
+    /* Chat Container Styles */
+    .chat-container {
+      background-color: #ffffff; /* White background for the chat container */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Padding around the content */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    /* Chat Messages Styles */
+    .chat-messages {
+      max-height: 300px; /* Limit height to prevent overflow */
+      overflow-y: auto; /* Enable vertical scrolling */
+      border: 1px solid #ccc; /* Light border around messages */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px; /* Padding inside the messages area */
+      background-color: #f9f9f9; /* Light gray background for messages */
+    }
+
+    /* Input and Button Styles */
+    #usernameInput, #chatInput {
+      width: 100%; /* Full width for inputs */
+      padding: 10px; /* Padding for inputs */
+      margin-top: 10px; /* Space above inputs */
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 5px; /* Rounded corners */
+    }
+
+    #chatInput {
+      height: 60px; /* Fixed height for chat input */
+    }
+
+    .btn {
+      background-color: #007bff; /* Bootstrap primary color */
+      color: white; /* White text */
+      padding: 10px; /* Padding for button */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-top: 10px; /* Space above button */
+      width: 100%; /* Full width for button */
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .btn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+    }
   
 
-/* Navbar */
-.navbar {
+
+/* Main Content Styles */
+.main {
+  background-color: #ffffff; /* White background for the main content */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 20px; /* Space above the main content */
+}
+
+  /* Main Heading Styles */
+  .main h1, .main h2 {
+    color: #333; /* Dark text color for headings */
+    margin-bottom: 10px; /* Space below headings */
+  }
+
+  /* Location Info Styles */
+  .main h5 {
+    color: #555; /* Slightly lighter color for location info */
+    margin-top: 10px; /* Space above location info */
+  }
+
+  /* Image Styles */
+  .imageStyle {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-top: 20px; /* Space above the image */
+  }
+
+  /* Additional Text Styles */
+  .main p {
+    color: #666; /* Light gray text color for paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+  }
+
+
+
+/* Footer Styles */
+.footer-content {
   background-color: #555;
-  overflow: auto;
-  position: sticky;
-  top: 0;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-  .navbar a {
-    float: left;
-    width: 25%;
-    text-align: center;
-    padding: 10px 0;
-    transition: all 0.5 ease;
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-  }
 
-  .navbar a.active {
-    background-color: #000000;
-    text-decoration: none;
-  }
-
-  .navbar span {
-    padding: 10px;
-  }
-
-  .navbar a:hover {
-    background-color: #fff;
-    color: #000;
-  }
-
-/* Content "row" */
-* {
-  box-sizing: border-box;
-}
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-    .side {
-      -ms-flex: 25%;
-      flex: 25%;
-      background-color: #ddd;
-      padding: 30px;
-      transition: left 0.5s;
-    }
-
-      .side h1 {
-        border-bottom: 2px solid black;
-        margin-bottom: 7px;
-      }
-
-      .side input[type=text], input[type=number], input[type=email], textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-
-      .side input[type=submit] {
-        background-color: #04aa6d;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-        .side input[type=submit]:hover {
-          background-color: #45a049;
-        }
-
-    .main {
-      -ms-flex: 75%;
-      flex: 75%;
-      background-color: #fff;
-      padding: 20px;
-    }
-
-      .main h1, .main h2 {
-        text-align: center;
-        word-spacing: 24px;
-      }
-
-      .main h5 {
-        text-align: center;
-      }
-
-      .main .imageStyle {
-        width: 100%;
-      }
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* Footer */
-@media (max-height:800px) {
-  footer { position: static;}
-}
 
 .footer-content {
   background-color: #555;
@@ -172,7 +200,7 @@ body {
   text-align: center;
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
-  margin-top: 80px;
+  
 }
 
   .footer-content .footer-left,
@@ -293,7 +321,7 @@ body {
       margin-bottom: 5px;
     }
 
-
+    
     /* Footer Bottom/Copyright */
     .footer-content .footer-bottom {
       color: #8f9296;
@@ -302,17 +330,54 @@ body {
       margin: 0;
     }
 
+    
+
+/* Responsive Area */
+@media screen and (max-width: 700px) {
+  .row {
+      flex-direction: column; /* Stack columns on smaller screens */
+  }
+
+  .side {
+      width: 100%; /* Full width for chat on smaller screens */
+      border-right: none; /* Remove border on smaller screens */
+      border-bottom: 1px solid #ccc; /* Optional bottom border */
+  }
+
+  .main {
+      width: 100%; /* Full width for main content on smaller screens */
+  }
+}
+
+/* Responsive layout for very small screens */
+@media screen and (max-width: 400px) {
+  .navbar a {
+      float: none;
+      width: 100%; /* Full width for navbar links */
+  }
+
+  .btn {
+      padding: 12px; /* Increase button padding for touch targets */
+      font-size: 16px; /* Increase font size for better readability */
+  }
+
+  #usernameInput, #chatInput {
+      padding: 12px; /* Increase padding for inputs */
+      font-size: 16px; /* Increase font size for better readability */
+  }
+}
+
 /* Responsive Footer */
 @media (max-width: 880px) {
   .footer-content .footer-left,
   .footer-content .footer-center,
   .footer-content .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
   }
   .footer-content .footer-center i {
-    margin-left: 0;
+      margin-left: 0;
   }
 }
