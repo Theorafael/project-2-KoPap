@@ -1,23 +1,17 @@
-/* Header 
-.header-bg {
-  background-image: url(../OGAH\ GESER!!!.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  padding: 215px;
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-  .header-text {
-    text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    filter: none;
-  }
-*/
+html {
+  background-color: #eaf0f2;
+}
 
 /* Body */
 body {
- font-family: Arial, Helvetica, sans-serif; 
+ font: 16px/1.6 Arial, Helvetica, sans-serif; 
  background-color: #fff;
 }
 
@@ -35,7 +29,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/images/OGAH\ GESER!!!.jpg);
+  background-image: url(/images/PapTim\ Logo.png);
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   filter: blur(7px); /* Adjust the blur as needed */
@@ -98,7 +92,7 @@ body {
       -ms-flex: 25%;
       flex: 25%;
       background-color: #ddd;
-      padding: 20px;
+      padding: 30px;
       transition: left 0.5s;
     }
 
@@ -138,7 +132,7 @@ body {
       padding: 20px;
     }
 
-      .main h1, h2 {
+      .main h1, .main h2 {
         text-align: center;
         word-spacing: 24px;
       }
@@ -167,91 +161,158 @@ body {
 }
 
 /* Footer */
-.footer {
-  background-color: #555; /* Dark background */
-  color: white; /* White text */
-  padding: 20px; /* Padding around the content */
-  text-align: left; /* Align text to the left */
+@media (max-height:800px) {
+  footer { position: static;}
 }
 
-/* Footer Content Container */
 .footer-content {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out columns */
-  align-items: flex-start; /* Align items at the start */
+  background-color: #555;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
 }
 
-/* Company Logo Column */
-.group-logo {
-  flex: 1; /* Allow the logo to take up equal space */
-  text-align: center; /* Center the logo */
-  margin-right: 20px; /* Space between columns */
-}
+  .footer-content .footer-left,
+  .footer-content .footer-center,
+  .footer-content .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
 
-.group-logo {
-  width: 100%; /* Adjust width as needed for the logo */
-  height: auto; /* Maintain aspect ratio */
-}
+    /* Footer Left */
+    .footer-content .footer-left {
+      width: 30%;
+    }
 
-/* Company Info Column */
-.footer-group-info {
-  flex: 1; /* Allow the company info to take up equal space */
-  margin-right: 20px; /* Space between columns */
-}
+      .footer-content h3 {
+        color: #fff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+      }
 
-/* Get in Touch Column */
-.footer-contact {
-  flex: 1; /* Allow the contact section to take up equal space */
-  margin-right: 20px; /* Space between columns */
-}
+      /* Footer image/logo */
+      .footer-content .footer-left img {
+        width: 30%;
+      }
 
-.footer-contact h2,
-.footer-group-info h2,
-.footer-social-media h2 {
-  margin-bottom: 10px; /* Space below headings */
-}
+      .footer-content h3 span {
+        color: #e0ac1c;
+      }
 
-.footer-contact input,
-.footer-contact textarea {
-  width: 100%; /* Full width for inputs and textarea */
-  padding: 10px; /* Padding inside the inputs */
-  margin-top: 5px; /* Space above inputs */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-}
+      /* Footer Links */
+      .footer-content .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+      }
 
-.footer-contact button[type="submit"] {
-  background-color: #04aa6d; /* Button color */
-  color: white; /* Text color */
-  padding: 10px 20px; /* Padding around the button text */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  margin-top: 10px; /* Space above button */
-}
+        .footer-content .footer-links a {
+          display: inline-block;
+          line-height: 1.8;
+          text-decoration: none;
+          color: inherit;
+        }
 
-.footer-contact button[type="submit"]:hover {
-  background-color: #45a049; /* Darker shade on hover */
-}
+    /* Footer Center */
+    .footer-content .footer-center {
+      width: 35%;
+    }
 
-/* Social Media Column */
-.footer-social-media {
-  flex: 1; /* Allow the social media section to take up equal space */
-}
+      .footer-content .footer-center i {
+        background-color: #33383b;
+        color: #fff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+      }
 
-.footer-social-media a {
-  color: white; /* Icon color */
-  font-size: 18px; /* Icon size */
-  margin-right: 15px; /* Space between icons */
-  text-decoration: none; /* Remove underline from links */
-}
+        .footer-content .footer-center i.fa-envelope {
+          font-size: 17px;
+          line-height: 38px;
+        }
 
-.footer-social-media a:hover {
-  color: #04aa6d; /* Change color on hover */
-}
+        .footer-content .footer-center p {
+          display: inline-block;
+          color: #fff;
+          vertical-align: middle;
+          margin: 0;
+        }
 
-/* Copyright Text */
-.footer p {
-  margin-top: 20px; /* Space above the copyright text */
-  text-align: center; /* Center the copyright text */
+        .footer-content .footer-center p span {
+          display: block;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 2;
+        }
+
+        .footer-content .footer-center p a {
+          color: #e0ac1c;
+          text-decoration: none;
+        }
+
+    /* Footer Right */
+    .footer-content .footer-right {
+      width: 30%;
+    }
+
+    .footer-content .footer-group-about {
+      line-height: 20px;
+      color: #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .footer-content .footer-group-about span {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer-content .footer-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+
+
+    /* Footer Bottom/Copyright */
+    .footer-content .footer-bottom {
+      color: #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+/* Responsive Footer */
+@media (max-width: 880px) {
+  .footer-content .footer-left,
+  .footer-content .footer-center,
+  .footer-content .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-content .footer-center i {
+    margin-left: 0;
+  }
 }

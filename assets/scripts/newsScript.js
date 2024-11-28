@@ -11,14 +11,7 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-function myFunction() {
-    let nav = document.getElementById("myTopnav");
-    if (nav.className === "navbar") {
-        nav.className += " responsive";
-    } else {
-        nav.className = "navbar";
-    }
-}
+
 
 // Countdown date
 let countDownDate = new Date("Jan 5, 2025 00:00:00").getTime(); // Target date
